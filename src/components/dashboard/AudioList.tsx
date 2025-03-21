@@ -12,7 +12,7 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedAudio, setSelectedAudio] = useState<string>("");
-
+  const [selectedDate, setSelectedDate] = useState<string>("");
   useEffect(() => {
     const fetchAudios = async () => {
       try {
@@ -33,11 +33,24 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
 
     fetchAudios();
   }, [_id]);
+  const extractDate = (filename: string) => filename.split("_")[0];
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const formattedDate = event.target.value.replace(/-/g, "");
+    setSelectedDate(formattedDate);
+  };
+
+  const filteredAudios = audios.filter(
+    (audio) =>
+      selectedDate === "" ||
+      extractDate(audio.audio_filename ?? "") === selectedDate
+  );
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedId = event.target.value;
     setSelectedAudio(selectedId);
-    const selectedAudioObj = audios.find((audio) => audio._id === selectedId);
+    const selectedAudioObj = filteredAudios.find(
+      (audio) => audio._id === selectedId
+    );
     if (selectedAudioObj) {
       onSelectAudio(selectedAudioObj);
     }
@@ -50,20 +63,41 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
         <p style={{ color: "red" }}>{error}</p>
       ) : audios.length > 0 ? (
         <div className="audio-list-container">
-          <select
-            value={selectedAudio}
-            onChange={handleSelectChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
-          >
-            <option value="" disabled className="text-gray-400">
-              Selecciona un audio
-            </option>
-            {audios.map((audio) => (
-              <option key={audio._id} value={audio._id}>
-                {audio.audio_filename}
+          <input
+            type="date"
+            value={
+              selectedDate
+                ? selectedDate.replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3")
+                : ""
+            }
+            onChange={handleDateChange}
+            className="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+          />
+          {selectedDate ? (
+            <select
+              value={selectedAudio}
+              onChange={handleSelectChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+            >
+              <option value="" disabled className="text-gray-400">
+                Selecciona un audio
               </option>
-            ))}
-          </select>
+              {filteredAudios.length > 0 ? (
+                filteredAudios.map((audio) => (
+                  <option key={audio._id} value={audio._id}>
+                    {audio.audio_filename}
+                  </option>
+                ))
+              ) : (
+                <option disabled>No hay audios para esta fecha</option>
+              )}
+            </select>
+          ) : (
+            <h3 className="text-gray-500 text-sm mt-2">
+              {" "}
+              Selecciona una fecha para ver los audios
+            </h3>
+          )}
         </div>
       ) : (
         <div className="no-users-container">

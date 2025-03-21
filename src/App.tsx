@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Loading from "./components/loading/loading";
+import Loading from "./components/loading/Loading";
 const Login = lazy(() => import("./pages/Login/Login"));
 const Private = lazy(() => import("./pages/Private/private"));
 
