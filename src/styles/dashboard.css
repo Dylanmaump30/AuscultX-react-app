@@ -4,8 +4,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  width: calc(100% - 17%); /* Ajuste según sidebar */
-  margin: 40px auto; /* Centrado horizontal */
+  width: calc(100% - 17%);
+  margin: 40px auto;
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
 .audio-list {
   display: flex;
   flex-direction: column;
-  overflow: visible; /* Para que los elementos se apilen verticalmente */
+  overflow: visible;
 }
 
 .audio-list-container {
