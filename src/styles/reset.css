@@ -1,0 +1,11 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  /*font-family: "Delicious Handrawn", serif;*/
+  font-family: "Poppins", serif;
+  background: #ebe9e9;
+}

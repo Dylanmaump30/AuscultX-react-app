@@ -1,0 +1,117 @@
+body.dark .myAccount .userInfo * {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .MuiPaper-elevation {
+  background-color: #23253a !important;
+}
+body.dark .myAccount .userInfo {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+body.dark .MuiPaper-elevation li *,
+body.dark .MuiPaper-elevation li {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+body.dark header {
+  background: #23253a !important;
+}
+body.dark header button.rounded-circle {
+  background: #2e3346 !important;
+}
+body.dark header button.rounded-circle svg {
+  color: #fff !important;
+}
+body.dark header .logo-container span {
+  color: #fff !important;
+  opacity: 0.9;
+}
+body.dark .sb .sidebarWrapper .sidebar {
+  background: #23253a !important;
+}
+body.dark .sb .sidebarWrapper .sidebar li button * {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+body.dark .sb .sidebarWrapper .sidebar li button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark .sb .sidebarWrapper .sidebar li button.active {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark {
+  background-color: #2e3346 !important;
+}
+body.dark header button.rounded-circle:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+body.dark .menu-item:hover {
+  background-color: #333;
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.dark .no-users-container {
+  background-color: #23253a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 60vh;
+  margin: 20px auto;
+  position: relative;
+  top: 30vh;
+}
+
+body.dark .no-users-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bolder;
+  max-width: 90%;
+  text-align: center;
+}
+
+body.dark .no-users-button {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #e2e9f1;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.8) (0, 0, 0, 0.1);
+}
+
+body.dark .no-users-button:hover {
+  background-color: #a4a6a7 !important;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+body.dark .loader {
+  background-color: #23253a;
+}
+
+body.dark .loader::before {
+  background: linear-gradient(to top, transparent, #50b0e0);
+}
+
+body.dark .loader::after {
+  background-color: #2e3346;
+  box-shadow: 0 0 10px #50b0e0, 0 0 20px #50b0e0, 0 0 30px #50b0e0,
+    0 0 40px #50b0e0, 0 0 50px #50b0e0;
+}
+
+body.dark .loader span {
+  background-color: #2e3346;
+}
+body.dark .audio-list-container {
+  background-color: #23253a;
+}
+body.dark .audio-list-container select {
+  color: #fff;
+  background-color: #23253a;
+}
+body.dark .audio-list-container select option:hover {
+  background: #50b0e0 !important;
+  cursor: pointer;
+  color: #ffffff !important;
+}

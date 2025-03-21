@@ -1,0 +1,9 @@
+@import url("./styles/reset.css");
+@import url("./styles/dashboard.css");
+@import url("./styles/layout.css");
+@import url("./styles/header.css");
+@import url("./styles/myaccount.css");
+@import url("./styles/sidebar.css");
+@import url("./styles/dark.css");
+@import url("./styles/responsivedash.css");
+@import "tailwindcss";
