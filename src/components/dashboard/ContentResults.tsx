@@ -6,7 +6,7 @@ import { getAudioData } from "../../services/audioService";
 import Loading from "../loading/Loading";
 import { AudioData, AudiosInfo } from "../../models/user.model";
 
-const Content = ({ _id }: AudiosInfo) => {
+const ContentResults = ({ _id }: AudiosInfo) => {
   const context = useContext(MyContext);
   const collapsed = context?.isToggleSidebar;
   const [audioData, setAudioData] = useState<AudioData | null>(null);
@@ -37,7 +37,6 @@ const Content = ({ _id }: AudiosInfo) => {
       <div className="all-content row dashboardBoxWrapperRow">
         <div className="graphscontainer col-md-11">
           <div className="dashboardBoxWrapper">
-            {/* Gráfico 1: Señal original */}
             <div className="dashboardBox">
               <Graph
                 id="grafico1"
@@ -50,7 +49,6 @@ const Content = ({ _id }: AudiosInfo) => {
               />
             </div>
 
-            {/* Gráfico 2: Señal filtrada */}
             <div className="dashboardBox">
               <Graph
                 id="grafico2"
@@ -63,7 +61,6 @@ const Content = ({ _id }: AudiosInfo) => {
               />
             </div>
 
-            {/* Gráfico 3: Señal envolvente */}
             <div className="dashboardBox">
               <Graph
                 id="grafico3"
@@ -94,4 +91,4 @@ const Content = ({ _id }: AudiosInfo) => {
   );
 };
 
-export default Content;
+export default ContentResults;

@@ -1,7 +1,44 @@
+import { useState } from "react";
+import AudioList from "../../components/dashboard/AudioList";
 import MainLayout from "../../components/dashboard/MainLayout";
+import Loading from "../../components/loading/Loading";
+import { AudiosInfo } from "../../models/user.model";
+import AudioPlayer from "../../components/dashboard/AudioPlayer";
 
 const Storage = () => {
-  return <MainLayout></MainLayout>;
+  const user = localStorage.getItem("user");
+  const parsedUser = user ? JSON.parse(user) : null;
+  const [selectedAudio, setSelectedAudio] = useState<AudiosInfo | null>(null);
+  const [processing, setProcessing] = useState(false);
+
+  const handleSelectAudio = (audio: AudiosInfo) => {
+    setSelectedAudio(audio);
+    setProcessing(true);
+
+    setTimeout(() => {
+      setProcessing(false);
+    }, 1000);
+  };
+
+  return (
+    <MainLayout>
+      {parsedUser ? (
+        <div className="audio-list">
+          <AudioList _id={parsedUser._id} onSelectAudio={handleSelectAudio} />
+          {processing ? (
+            <Loading />
+          ) : (
+            selectedAudio &&
+            selectedAudio.s3_key && (
+              <AudioPlayer _id={parsedUser._id} s3_key={selectedAudio.s3_key} />
+            )
+          )}
+        </div>
+      ) : (
+        <p>No se encontró usuario.</p>
+      )}
+    </MainLayout>
+  );
 };
 
 export default Storage;

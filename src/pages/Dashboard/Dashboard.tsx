@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AudioList from "../../components/dashboard/AudioList";
-import Content from "../../components/dashboard/Content";
+import ContentResults from "../../components/dashboard/ContentResults";
 import MainLayout from "../../components/dashboard/MainLayout";
 import { AudiosInfo } from "../../models/user.model";
 import Loading from "../../components/loading/Loading";
@@ -27,7 +27,7 @@ const Dashboard = () => {
           {processing ? (
             <Loading />
           ) : (
-            selectedAudio && <Content _id={selectedAudio._id} />
+            selectedAudio && <ContentResults _id={selectedAudio._id} />
           )}
         </div>
       ) : (
