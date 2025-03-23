@@ -23,14 +23,19 @@ const Storage = () => {
   return (
     <MainLayout>
       {parsedUser ? (
-        <div className="audio-list">
+        <div>
           <AudioList _id={parsedUser._id} onSelectAudio={handleSelectAudio} />
           {processing ? (
             <Loading />
           ) : (
             selectedAudio &&
             selectedAudio.s3_key && (
-              <AudioPlayer _id={parsedUser._id} s3_key={selectedAudio.s3_key} />
+              <div className="audio-player-container mt-4 flex flex-col items-center position-relative top-40">
+                <AudioPlayer
+                  _id={parsedUser._id}
+                  s3_key={selectedAudio.s3_key}
+                />
+              </div>
             )
           )}
         </div>
