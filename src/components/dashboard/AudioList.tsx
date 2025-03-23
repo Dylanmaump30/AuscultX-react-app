@@ -3,6 +3,7 @@ import { getAudios } from "../../services/audioService";
 import { AudioListProps, AudiosInfo } from "../../models/user.model";
 import Loading from "../loading/Loading";
 import DownloadButton from "../button/DownloadButton";
+
 export interface AudioListExtendedProps extends AudioListProps {
   onSelectAudio: (audio: AudiosInfo) => void;
 }
@@ -55,31 +56,35 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
       onSelectAudio(selectedAudioObj);
     }
   };
+  const today = new Date().toISOString().split("T")[0];
+
   return (
-    <div>
+    <div className="audio-list-container">
       {loading ? (
         <Loading />
       ) : error ? (
-        <p style={{ color: "red" }}>{error}</p>
+        <p className="text-red-500 font-bold">{error}</p>
       ) : audios.length > 0 ? (
-        <div className="audio-list-container">
+        <div className="flex flex-col items-center w-full">
           <input
             type="date"
+            max={today}
             value={
               selectedDate
                 ? selectedDate.replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3")
                 : ""
             }
             onChange={handleDateChange}
-            className="w-full px-4 py-2 mb-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+            className="select-date"
           />
-          {selectedDate ? (
+
+          {selectedDate && (
             <select
               value={selectedAudio}
               onChange={handleSelectChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+              className="select-audio mt-4"
             >
-              <option value="" disabled className="text-gray-400">
+              <option value="" disabled>
                 Selecciona un audio
               </option>
               {filteredAudios.length > 0 ? (
@@ -92,10 +97,11 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
                 <option disabled>No hay audios para esta fecha</option>
               )}
             </select>
-          ) : (
-            <h3 className="text-gray-500 text-sm mt-2">
-              {" "}
-              Selecciona una fecha para ver los audios
+          )}
+
+          {!selectedDate && (
+            <h3 className="text-black text-3xl mt-4 font-righteous text-center">
+              Selecciona una fecha y examina tus pulmones!
             </h3>
           )}
         </div>
