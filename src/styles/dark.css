@@ -103,15 +103,21 @@ body.dark .loader::after {
 body.dark .loader span {
   background-color: #2e3346;
 }
-body.dark .audio-list-container {
-  background-color: #23253a;
+
+body.dark .select-audio,
+.select-date {
+  background-color: black;
+  background: #fff;
+  border: 1px solid #252525;
+  width: 20%;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
-body.dark .audio-list-container select {
-  color: #fff;
-  background-color: #23253a;
-}
-body.dark .audio-list-container select option:hover {
-  background: #50b0e0 !important;
-  cursor: pointer;
-  color: #ffffff !important;
+body.dark .select-text {
+  color: #fff !important;
+  font-weight: bold;
 }

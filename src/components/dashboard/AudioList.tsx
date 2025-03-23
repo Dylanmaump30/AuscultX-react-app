@@ -94,22 +94,26 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
                   </option>
                 ))
               ) : (
-                <option disabled>No hay audios para esta fecha</option>
+                <option disabled>No audios available for this date.</option>
               )}
             </select>
           )}
 
           {!selectedDate && (
-            <h3 className="text-black text-3xl mt-4 font-righteous text-center">
-              Selecciona una fecha y examina tus pulmones!
+            <h3 className="select-text text-black text-3xl mt-4 font-righteous text-center">
+              Select a date and examine your lungs!
+              <img
+                className="exam-img flex flex-col items-center w-full"
+                src="/exam.png"
+              />
             </h3>
           )}
         </div>
       ) : (
         <div className="no-users-container">
           <h3 className="no-users-text">
-            No tienes audios guardados. <br />
-            Descarga la app y escucha tu respiración
+            You have no saved audios. <br />
+            Download the app and listen to your lungs.
           </h3>
 
           <DownloadButton
