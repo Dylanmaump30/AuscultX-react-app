@@ -1,139 +1,64 @@
-# Custom Form with React Hook Form and Zod
+# AuscultX React App
 
-This project demonstrates how to create a customizable form using React Hook Form, Zod for schema validation, and modular components for reusability. The form includes input fields for name, email, password, and confirm password, with error handling and validation.
+## Overview
+
+AuscultX is a frontend application built with React. It is part of the AuscultX project, which aims to provide advanced auscultation tools for medical professionals. This README provides an overview of the project, setup instructions, and other relevant information.
 
 ## Features
 
-- **React Hook Form**: Lightweight and performant form handling.
-- **Zod**: Schema-based validation for form inputs.
-- **Reusable Components**: Modular input components for scalability.
-- **Validation Feedback**: Displays error messages for invalid inputs.
-
-## Project Structure
-
-```
-project-directory/
-├── components/
-│   └── CustomInput.tsx  # Reusable input field component
-├── models/
-│   └── index.ts         # Schema and form value types
-├── App.tsx              # Main application entry point
-├── CustomForm.tsx       # Form implementation
-├── CustomInput.css      # Styles for input fields
-└── ...                  # Other project files
-```
+- **Auscultation analysis**: Provides analysis of auscultation data.
+- **User-friendly interface**: Easy-to-use interface for medical professionals.
+- **Integration with backend services**: Seamless integration with the AuscultX backend services.
 
 ## Prerequisites
 
-- Node.js (>=14.x)
-- npm or Yarn
+- Node.js (version 14.x or higher)
+- npm (version 6.x or higher)
 
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/custom-form.git
-   cd custom-form
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
 
-## Usage
-
-1. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-2. Open your browser and navigate to `http://localhost:3000` to view the form.
-
-## Code Overview
-
-### `CustomForm.tsx`
-
-This component implements the form using `useForm` from React Hook Form and `zodResolver` for validation.
-
-```tsx
-const {
-  control,
-  handleSubmit,
-  formState: { errors },
-} = useForm<FormValues>({
-  resolver: zodResolver(schema),
-});
+```bash
+git clone https://github.com/yourusername/AuscultX-react-app.git
 ```
 
-The form fields are rendered using the `InputForm` component, which handles individual input rendering and error feedback.
+2. Navigate to the project directory:
 
-### `CustomInput.tsx`
-
-A reusable component for input fields. It uses the `Controller` from React Hook Form to connect each input with the form state.
-
-```tsx
-<Controller
-  name={name}
-  control={control}
-  render={({ field }) => (
-    <input
-      id={name}
-      type={type}
-      {...field}
-      className={`form-control ${error ? "is-invalid" : ""}`}
-    />
-  )}
-/>
+```bash
+cd AuscultX-react-app
 ```
 
-### `models/index.ts`
+3. Install the dependencies:
 
-Defines the schema and types for the form using Zod:
-
-```ts
-import * as z from "zod";
-
-export const schema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  confirmPassword: z
-    .string()
-    .refine(
-      (value, context) => value === context.parent.password,
-      "Passwords must match"
-    ),
-});
-
-export type FormValues = z.infer<typeof schema>;
+```bash
+npm install
 ```
 
-## Styles
+## Running the Application
 
-The `CustomInput.css` file provides basic styling for the form inputs, including error highlighting.
+To start the development server, run:
 
-```css
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-control.is-invalid {
-  border-color: red;
-}
-
-.error {
-  color: red;
-  font-size: 0.8rem;
-}
+```bash
+npm run dev
 ```
 
-## Contribution
+The application will be available at `http://localhost:5173`.
 
-Contributions are welcome! Feel free to submit issues or pull requests to improve the project.
+## Building for Production
 
-## License
+To create a production build, run:
 
-This project is licensed under the [MIT License](LICENSE).
+```bash
+npm run build
+```
+
+The build artifacts will be stored in the `build/` directory.
+
+## Contributing
+
+Contributions are welcome!
+
+## Contact
+
+For any questions or inquiries, please contact [dylanmauricio05@gmail.com].
