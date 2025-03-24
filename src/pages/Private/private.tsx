@@ -2,7 +2,7 @@ import { Navigate, Route } from "react-router-dom";
 import { PrivateRoutes } from "../../routes";
 import RoutesWithNotFound from "../../utilities/routes-with-not-found";
 import { lazy, Suspense } from "react";
-import Loading from "../../components/loading/loading";
+import Loading from "../../components/loading/Loading";
 const Dashboard = lazy(() => import("../Dashboard/Dashboard"));
 const Storage = lazy(() => import("../Storage/Storage"));
 
