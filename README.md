@@ -20,7 +20,7 @@ AuscultX is a frontend application built with React. It is part of the AuscultX 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/AuscultX-react-app.git
+git clone https://github.com/Dylanmaump30/AuscultX-react-app.git
 ```
 
 2. Navigate to the project directory:
@@ -44,16 +44,6 @@ npm run dev
 ```
 
 The application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-To create a production build, run:
-
-```bash
-npm run build
-```
-
-The build artifacts will be stored in the `build/` directory.
 
 ## Contributing
 
