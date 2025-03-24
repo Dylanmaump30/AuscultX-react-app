@@ -2,25 +2,25 @@
 
 ## Overview
 
-AuscultX is a frontend application built with React. It is part of the AuscultX project, which aims to provide advanced auscultation tools for medical professionals. This README provides an overview of the project, setup instructions, and other relevant information.
+AuscultX is a frontend application built with React. It is part of the AuscultX project, which aims to provide auscultation tools for monitoring. This application shows the results and stores the data from the audios recorded by the AuscultX-apk. The primary variable monitored is the respiratory frequency or breathing rate. This README provides an overview of the project, setup instructions, and other relevant information.
 
 ## Features
 
 - **Auscultation analysis**: Provides analysis of auscultation data.
-- **User-friendly interface**: Easy-to-use interface for medical professionals.
+- **User-friendly interface**: Easy-to-use interface.
 - **Integration with backend services**: Seamless integration with the AuscultX backend services.
 
 ## Prerequisites
 
-- Node.js (version 14.x or higher)
 - npm (version 6.x or higher)
+- Vite (version 2.x or higher)
 
 ## Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/AuscultX-react-app.git
+git clone https://github.com/Dylanmaump30/AuscultX-react-app.git
 ```
 
 2. Navigate to the project directory:
@@ -44,16 +44,6 @@ npm run dev
 ```
 
 The application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-To create a production build, run:
-
-```bash
-npm run build
-```
-
-The build artifacts will be stored in the `build/` directory.
 
 ## Contributing
 
