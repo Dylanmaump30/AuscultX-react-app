@@ -61,7 +61,7 @@
 
 .btn-nav:hover {
   background-color: #ffffff;
-  color: #00008b;
+  color: #000000;
 }
 .btn-nav-register {
   font-size: 1rem;
@@ -75,7 +75,7 @@
 }
 .btn-nav-register:hover {
   background-color: #ffffff;
-  color: #00008b;
+  color: #000000;
 }
 /* Estilos responsivos */
 @media screen and (max-width: 480px) {
@@ -110,7 +110,7 @@
     color: #ffffff;
     background-color: transparent;
     border-radius: 5px;
-    padding: 10px 16px;
+    padding: 10px 10px;
     margin: 8px 15px 8px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -121,5 +121,34 @@
   .btn-nav:hover {
     background-color: none !important;
     color: #00008b;
+  }
+  .exam-img {
+    width: 30vh;
+    position: relative;
+    flex: column;
+    justify-content: center;
+    align-items: center;
+    left: 50px;
+  }
+  .select-date,
+  .select-audio {
+    background-color: #ffffff;
+    border: 1px solid #252525;
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  .audio-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 20vh;
   }
 }

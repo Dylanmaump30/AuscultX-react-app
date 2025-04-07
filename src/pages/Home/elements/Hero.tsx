@@ -8,7 +8,7 @@ function Hero() {
         <p>Get your checkup now!</p>
       </div>
       <DownloadButton
-        fileName="/images/LungTrack.apk"
+        fileName="/public/AuscultX.apk"
         className="download-button"
       >
         {" "}

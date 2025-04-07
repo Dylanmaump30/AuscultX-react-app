@@ -45,7 +45,7 @@ const ContentResults = ({ _id }: AudiosInfo) => {
                 y={original_signal}
                 titley="Amplitud"
                 title="Señal Original"
-                linecolor="blue"
+                linecolor="#148db6"
               />
             </div>
 
@@ -57,7 +57,7 @@ const ContentResults = ({ _id }: AudiosInfo) => {
                 y={filtered_signal}
                 titley="Amplitud"
                 title="Señal Filtrada"
-                linecolor="green"
+                linecolor="#148db6"
               />
             </div>
 
@@ -69,7 +69,7 @@ const ContentResults = ({ _id }: AudiosInfo) => {
                 y={envelope_signal}
                 titley="Amplitud"
                 title="Señal Envolvente"
-                linecolor="red"
+                linecolor="#148db6"
               />
             </div>
 
