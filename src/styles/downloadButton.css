@@ -11,6 +11,6 @@
 }
 
 .download-button:hover {
-  background-color: #ffffff !important;
-  color: #00008b !important;
+  color: #030303 !important;
+  background-color: white;
 }

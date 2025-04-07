@@ -76,11 +76,11 @@ export default function Graph({
           },
           title: {
             text: title,
-          },
-          titlefont: {
-            family: "Roboto Condensed",
-            size: 18,
-            color: "black",
+            font: {
+              family: "Roboto Condensed",
+              size: 23, // Aumentar tamaño del título
+              color: "black",
+            },
           },
         }}
         config={{ responsive: true, displayModeBar: false }}

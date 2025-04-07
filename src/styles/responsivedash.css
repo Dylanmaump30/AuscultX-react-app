@@ -16,7 +16,6 @@
   .logo-container img {
     width: 30px !important;
   }
-
   .logo-container span {
     color: black;
     font-weight: bold !important;
@@ -201,5 +200,45 @@
 
   .logout-text {
     display: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    font-family: "Righteous", cursive !important;
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    font-family: "Righteous", cursive !important;
+    margin-bottom: 20px;
+  }
+
+  .apk button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+  }
+
+  .apk button:hover {
+    background-color: #0056b3;
+  }
+  .select-text {
+    font-size: 15px;
+    margin-left: 90px;
   }
 }
