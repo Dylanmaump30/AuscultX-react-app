@@ -62,11 +62,13 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
   return (
     <div className="audio-list-container">
       {loading ? (
-        <Loading />
+        <div className="loading-container">
+          <Loading />
+        </div>
       ) : error ? (
         <p className="text-red-500 font-bold">{error}</p>
       ) : audios.length > 0 ? (
-        <div className="flex flex-col items-center w-full">
+        <div className="audio-list flex flex-col items-center w-full">
           <input
             type="date"
             max={today}
@@ -86,7 +88,7 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
               className="select-audio mt-4"
             >
               <option value="" disabled>
-                Selecciona un audio
+                Select an audio
               </option>
               {filteredAudios.length > 0 ? (
                 filteredAudios.map((audio) => (
