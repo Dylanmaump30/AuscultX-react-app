@@ -27,7 +27,9 @@ const Storage = () => {
         <div>
           <AudioList _id={parsedUser._id} onSelectAudio={handleSelectAudio} />
           {processing ? (
-            <Loading />
+            <div className="loading-container-results">
+              <Loading />
+            </div>
           ) : (
             selectedAudio &&
             selectedAudio.s3_key && (

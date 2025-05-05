@@ -21,7 +21,8 @@ function AudioPlayer({ s3_key }: AudiosInfo) {
   }
 
   return (
-    <div>
+    <div className="audio-player-container mt-4 flex flex-col items-center position-relative bottom-20">
+      <h2 className="text-2xl font-bold mb-4">Reproductor de Audio</h2>
       <audio key={s3_key} ref={audioRef} controls>
         <source src={audioUrl} type="audio/wav" />
         Tu navegador no soporta el elemento de audio.

@@ -27,7 +27,11 @@ const ContentResults = ({ _id }: AudiosInfo) => {
   }, [_id]);
 
   if (!audioData) {
-    return <Loading />;
+    return (
+      <div className="loading-container-results">
+        <Loading />;
+      </div>
+    );
   }
   const { time, original_signal, filtered_signal, envelope_signal, rpm } =
     audioData;
