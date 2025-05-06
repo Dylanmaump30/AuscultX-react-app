@@ -2,7 +2,7 @@
   width: 17%;
   min-width: 250px;
   background: #ffffff;
-  height: calc(100vh - 70px); /* Para evitar que el sidebar ocupe el header */
+  height: calc(100vh - 70px);
   position: fixed;
   width: calc(100% - 17%);
   top: 70px;
