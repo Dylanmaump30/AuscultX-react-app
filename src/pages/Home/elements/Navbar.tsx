@@ -15,9 +15,7 @@ function Navbar() {
           <Link to={PublicRoutes.HOME} className="btn-nav ">
             Home
           </Link>
-          <Link to={`/${PublicRoutes.ABOUT}`} className="btn-nav ">
-            About Us
-          </Link>
+
           <Link to={`/${PublicRoutes.LOGIN}`} className="btn-nav">
             Login
           </Link>

@@ -92,7 +92,6 @@
 
   .logo-text {
     color: #ffffff;
-    font-family: "Righteous", cursive;
     font-size: 1.5rem;
     margin-left: 10px;
   }
@@ -115,9 +114,7 @@
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  .btn-nav-register {
-    display: none;
-  }
+
   .btn-nav:hover {
     background-color: none !important;
     color: #00008b;

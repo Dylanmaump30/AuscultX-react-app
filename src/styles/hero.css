@@ -46,13 +46,13 @@
   .hero-content h1 {
     font-size: 32px;
     margin-bottom: 10px;
-    font-family: "Righteous", cursive !important;
+    font-family: "Poppins", sans-serif !important;
   }
 
   .hero-content p {
     font-size: 18px;
     margin-bottom: 20px;
-    font-family: "Righteous", cursive !important;
+    font-family: "Poppins", sans-serif !important;
   }
 
   .apk button {
