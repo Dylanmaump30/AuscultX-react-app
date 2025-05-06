@@ -32,6 +32,8 @@
   margin-left: 5%;
   padding: 90px 30px;
 }
-.select-audio {
-  width: 20% !important;
+.exam-img {
+  width: 90%;
+  height: 40%;
+  border-radius: 16px;
 }
