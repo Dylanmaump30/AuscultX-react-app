@@ -22,7 +22,7 @@ const Dashboard = () => {
   return (
     <MainLayout>
       {parsedUser ? (
-        <div className="audio-list-containerdashboard">
+        <>
           <AudioList _id={parsedUser._id} onSelectAudio={handleSelectAudio} />
           {processing ? (
             <div className="loading-container-results">
@@ -31,7 +31,7 @@ const Dashboard = () => {
           ) : (
             selectedAudio && <ContentResults _id={selectedAudio._id} />
           )}
-        </div>
+        </>
       ) : (
         <p>No se encontró usuario.</p>
       )}
