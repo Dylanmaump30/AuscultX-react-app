@@ -10,7 +10,6 @@ import RoutesWithNotFound from "./utilities/routes-with-not-found";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
 import Loading from "./components/loading/Loading";
 const Login = lazy(() => import("./pages/Login/Login"));
 const Private = lazy(() => import("./pages/Private/private"));
@@ -41,7 +40,6 @@ function App() {
               <Route path={PublicRoutes.HOME} element={<Home />} />
               <Route path={PublicRoutes.LOGIN} element={<Login />} />
               <Route path={PublicRoutes.REGISTER} element={<Register />} />
-              <Route path={PublicRoutes.ABOUT} element={<About />} />
               <Route element={<AuthGuard privateValidation={true} />}>
                 <Route index element={<MainLayout />} />
                 <Route
