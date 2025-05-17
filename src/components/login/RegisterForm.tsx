@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import RegisterInput from "./RegisterInput";
 import { registerUser } from "../../services/registerService";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaHome, FaUser } from "react-icons/fa";
@@ -106,7 +106,10 @@ export const RegisterForm = () => {
           </button>
           <div className="register-link">
             <p>
-              Already have an account? <a href={PublicRoutes.LOGIN}> Log in</a>
+              Already have an account?{" "}
+              <Link to={`/${PublicRoutes.LOGIN}`} className=" ">
+                Log in
+              </Link>
             </p>
           </div>
         </form>

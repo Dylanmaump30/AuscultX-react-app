@@ -6,7 +6,7 @@ import { loginUser } from "../../services/loginService";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { PrivateRoutes, PublicRoutes } from "../../routes";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaLock } from "react-icons/fa";
 import "../../styles/customInput.css";
 import { MdOutlineEmail } from "react-icons/md";
@@ -82,7 +82,9 @@ export const LoginForm2 = () => {
             <div className="register-link">
               <p>
                 Don't have an account?{" "}
-                <a href={PublicRoutes.REGISTER}> Sign up </a>
+                <Link to={`/${PublicRoutes.REGISTER}`} className=" ">
+                  Sign up
+                </Link>
               </p>
             </div>
           </form>
