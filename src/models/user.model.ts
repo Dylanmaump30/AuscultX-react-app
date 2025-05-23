@@ -20,6 +20,16 @@ export interface AudioListProps {
   _id: string;
 }
 
+export interface ImageData {
+  images: {
+    original: string;
+    filtered: string;
+    peaks: string;
+  };
+  rpm: number;
+  n_peaks: number;
+}
+
 export interface AudioData {
   time: number[];
   original_signal: number[];

@@ -3,7 +3,7 @@ import Plot from "react-plotly.js";
 import { motion } from "framer-motion";
 
 interface GraphProps {
-  id: string; // Identificador único
+  id: string;
   collapsed?: boolean;
   x: number[];
   y: number[];
@@ -78,7 +78,7 @@ export default function Graph({
             text: title,
             font: {
               family: "Roboto Condensed",
-              size: 23, // Aumentar tamaño del título
+              size: 23,
               color: "black",
             },
           },
