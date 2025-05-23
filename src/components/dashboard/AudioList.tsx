@@ -122,7 +122,7 @@ const AudioList = ({ _id, onSelectAudio }: AudioListExtendedProps) => {
           </h3>
 
           <DownloadButton
-            fileName="/images/LungTrack.apk"
+            fileName="/AuscultX.apk"
             className="no-users-button"
           />
         </div>
